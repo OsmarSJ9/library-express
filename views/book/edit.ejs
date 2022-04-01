@@ -1,0 +1,21 @@
+<%- include ../layouts/header.ejs%>
+<h1>Update register</h1>
+
+<form action="../update/" method="post" enctype="multipart/form-data">
+
+    <input type="hidden" name="id" value="<%=book.id%>">
+    <div class="form-group">
+        <label for="my-input">Name: </label>
+        <input type="text" name="title" id="" class="form-control" value="<%= book.title %>">
+    </div>
+    <div class="form-group">
+        <label for="my-input">Image: </label><br>
+        <img src="/images/<%= book.image %>" alt="" width="150" style="margin: 20px 0px;">
+        <input type="file" name="image" id="" class="form-control" value="/images/<%= book.image %>">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-success">Save</button>
+
+</form>
+
+<%- include ../layouts/footer.ejs%>
